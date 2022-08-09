@@ -1,3 +1,31 @@
-https://www.youtube.com/watch?v=fd0WOOrEIVs
-
-follow this and edit as needed
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Generator</title>
+        <link rel="stylesheet" href="color.css">
+    </head>
+    <body>
+        <div>
+            <div class="card" id="card"></div>
+        </div>
+        <button type="button" id="load_more">More Cats!</button>
+        <script>
+            let card = document.getElementById("card");
+            let url = "https://api.thecatapi.com/v1/images/search"
+            let data = async () => (await fetch(url)).json();
+            let btn = document.getElementById("load_more");
+            btn.onclick = () => {
+                data().then((res) => {
+                    let img = document.createElement("img");
+                    img.src = res[0].url;
+                    card.appendChild(img);
+                }).catch((err) => {
+                    alert(err);
+                });
+            }
+        </script>
+    </body>
+</html>
