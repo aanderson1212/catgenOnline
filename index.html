@@ -5,14 +5,37 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cat Generator</title>
-        <link rel="stylesheet" href="color.css">
-        <link rel="icon" href="cat.jpg">
+        <link rel="stylesheet" href="style.css">
     </head>
+    <style>
+    .card img{
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin: 20px;
+    }
+    
+    </style>
     <body>
-        <div>
-            <div class="card" id="card"></div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Interests</a></li>
+                <li><a href="doomMaps.html">Doom Maps</a></li>
+                <li><a href="renders.html">Renders</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="http://users.smartgb.com/g/g.php?a=s&i=g19-01668-ce" target="_blank">Guestbook</a></li>
+                <hr>
+                <h2 style="color:royalblue;">Other Pages:</h2>
+                <li><a href="archive.html">Archive (WIP)</a></li>
+                <li><a href="catGen.html">Cat Generator</a></li>
+            </ul>
         </div>
-        <button type="button" id="load_more">More Cats!</button>
+        <div>
+            <div class="card" id="card" style="padding-left: 290px;"></div>
+        </div>
+        <button type="button" id="load_more" style="background-color: black; color: white; position: fixed; left: 240px; font-size: 35px;">More Cats!</button>
         <script>
             let card = document.getElementById("card");
             let url = "https://api.thecatapi.com/v1/images/search"
