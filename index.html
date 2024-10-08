@@ -17,25 +17,10 @@
     
     </style>
     <body>
-        <div class="sidebar">
-            <ul>
-                <li><a href="https://sorobie.neocities.org/">Home</a></li>
-                <li><a href="https://sorobie.neocities.org/blog">Blog</a></li>
-                <li><a href="https://sorobie.neocities.org/about">Interests</a></li>
-                <li><a href="https://sorobie.neocities.org/doomMaps">Doom Maps</a></li>
-                <li><a href="https://sorobie.neocities.org/renders">Renders</a></li>
-                <li><a href="https://sorobie.neocities.org/contactl">Contact</a></li>
-                <li><a href="http://users.smartgb.com/g/g.php?a=s&i=g19-01668-ce" target="_blank">Guestbook</a></li>
-                <hr>
-                <h2 style="color:royalblue;">Other Pages:</h2>
-                <li><a href="https://sorobie.neocities.org/archive">Archive (WIP)</a></li>
-                <li><a href="#">Cat Generator</a></li>
-            </ul>
-        </div>
         <div>
             <div class="card" id="card" style="padding-left: 290px;"></div>
         </div>
-        <button type="button" id="load_more" style="background-color: black; color: white; position: fixed; left: 240px; font-size: 35px;">More Cats!</button>
+        <button type="button" id="load_more" style="background-color: black; color: white; position: fixed; font-size: 35px;">More Cats!</button>
         <script>
             let card = document.getElementById("card");
             let url = "https://api.thecatapi.com/v1/images/search"
