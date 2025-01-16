@@ -7,20 +7,11 @@
         <title>Cat Generator</title>
         <link rel="stylesheet" href="color.css">
     </head>
-    <style>
-    .card img{
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-        margin: 20px;
-    }
-    
-    </style>
     <body>
         <div>
-            <div class="card" id="card" style="padding-left: 290px;"></div>
+            <div class="card" id="card"></div>
         </div>
-        <button type="button" id="load_more" style="background-color: black; color: white; position: fixed; font-size: 35px;">More Cats!</button>
+        <button type="button" id="load_more">More Cats!</button>
         <script>
             let card = document.getElementById("card");
             let url = "https://api.thecatapi.com/v1/images/search"
